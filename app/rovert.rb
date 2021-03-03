@@ -25,4 +25,18 @@ class Rovert
   def get_position
     "#{x} #{y} #{direction}"
   end
+
+  private
+  def turn(direction)
+    case @direction
+    when 'N'
+      direction == 'L' ? @direction = 'W' : @direction = 'E'
+    when 'E'
+      direction == 'L' ? @direction = 'N' : @direction = 'S'
+    when 'S'
+      direction == 'L' ? @direction = 'E' : @direction = 'W'
+    when 'W'
+      direction == 'L' ? @direction = 'S' : @direction = 'N'
+    end
+  end
 end
