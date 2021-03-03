@@ -21,4 +21,8 @@ class Rovert
       end
     end
   end
+
+  def get_position
+    "#{x} #{y} #{direction}"
+  end
 end
